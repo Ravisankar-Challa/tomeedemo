@@ -1,8 +1,9 @@
 This application can be run using following command
 mvn clean package tomee:run -Denvironment=prod -Djdbc.driver=org.h2.Driver -Djdbc.url=jdbc:h2:tcp://localhost/~/test1;DB_CLOSE_ON_EXIT=FALSE; -Djdbc.username=sa -Djdbc.password=CVTxCNqevHM=
 db password is 'sa'
+To create a database password cipher run /bin/tomee.bat/sh cipher 'password'
 Tomee maven plugin looks for tomee conf folder by default in ${project.basedir}/src/main/tomee/conf
-This can we can be overridden by tomee maven plugin configuration
+This can be overridden by tomee maven plugin configuration
 <plugin>
 	<groupId>org.apache.tomee.maven</groupId>
 	<artifactId>tomee-maven-plugin</artifactId>
@@ -40,13 +41,13 @@ ex:- Data Source
 	 </tomee>
 The above configuration can also be placed in WEB-INF/resources.xml	 
 For more details refer - http://tomee.apache.org/datasource-config.html	 
-To create a database password cipher run /bin/tomee.bat cipher 'password'
 
 We can also pass these parameters in conf/system.properties file or from command line.
 ex:- from command line
 For linix only : mvn -DadditionalSystemProperties=-Dpropertyname=value
 Linux : mvn clean package tomee:run -DadditionalSystemProperties=-DtestDataSource=new://Resource?type=javax.sql.DataSource -DtestDataSource.jdbcDriver=org.h2.Driver -DtestDataSource.jdbcUrl=jdbc:h2:tcp://localhost/~/test1 -DtestDataSource.userName=sa -DtestDataSource.password=sa
 Windows : mvn clean package tomee:run -DtestDataSource=new://Resource?type=javax.sql.DataSource -DtestDataSource.jdbcDriver=org.h2.Driver -DtestDataSource.jdbcUrl=jdbc:h2:tcp://localhost/~/test1 -DtestDataSource.userName=sa -DtestDataSource.password=sa
+
 Sabot:
 The Properties themselves can come from java.lang.System.getProperties() using -D[property name]=[property value] on the command line, properties added to a WEB-INF/classes/base.properties file or (optionally for TomEE users) in the conf/system.properties file of your server.
 There are various ways of customizing the configuration for differing environments. You can:
