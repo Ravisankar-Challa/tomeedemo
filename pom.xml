@@ -42,7 +42,7 @@
 					<config>${project.basedir}/src/main/tomee/conf</config>
 					<libs>
 						<lib>com.h2database:h2:${version.h2}</lib>
-						<lib>oracle.jdbc:ojdbc:${version.oracle.driver}</lib>
+						<!-- <lib>oracle.jdbc:ojdbc:${version.oracle.driver}</lib> -->
 					</libs>
 					<systemVariables>
 						<org.tomitribe.sabot.environment>${environment}</org.tomitribe.sabot.environment>

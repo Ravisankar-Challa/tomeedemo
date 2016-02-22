@@ -4,10 +4,10 @@
 		<jta-data-source>testDataSource</jta-data-source>
 		<class>com.example.entity.Member</class>
 		<properties>
-		 <!--  <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(foreignKeys=true,schemaAction='dropDB,add')"/>
+		 <property name="openjpa.jdbc.SynchronizeMappings" value="buildSchema(foreignKeys=true,schemaAction='dropDB,add')"/>
 		  <property name="openjpa.jdbc.SchemaFactory" value="native(foreignKeys=true)" />
 		  <property name="openjpa.jdbc.MappingDefaults" value="ForeignKeyDeleteAction=restrict, JoinForeignKeyDeleteAction=restrict"/>
- -->		  <property name="openjpa.Log" value="DefaultLevel=INFO,SQL=TRACE" />
+		  <property name="openjpa.Log" value="DefaultLevel=INFO,SQL=TRACE" />
 		</properties>
 	</persistence-unit>
 </persistence>
