@@ -1,3 +1,6 @@
+This application can be run using following command
+mvn clean package tomee:run -Denvironment=prod -Djdbc.driver=org.h2.Driver -Djdbc.url=jdbc:h2:tcp://localhost/~/test1;DB_CLOSE_ON_EXIT=FALSE; -Djdbc.username=sa -Djdbc.password=CVTxCNqevHM=
+db password is 'sa'
 Tomee maven plugin looks for tomee conf folder by default in ${project.basedir}/src/main/tomee/conf
 This can we can be overridden by tomee maven plugin configuration
 <plugin>
