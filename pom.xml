@@ -23,6 +23,21 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+			<groupId>javax.cache</groupId>
+			<artifactId>cache-api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.tomitribe</groupId>
+		    <artifactId>jcache-cdi</artifactId>
+		    <version>0.1-SNAPSHOT</version>
+	    </dependency>
+		<dependency>
+			<groupId>com.hazelcast</groupId>
+			<artifactId>hazelcast</artifactId>
+			<version>3.6</version>
+		</dependency>
+		<dependency>
 			<groupId>org.tomitribe</groupId>
 			<artifactId>sabot</artifactId>
 			<version>${version.sabot}</version>
@@ -45,19 +60,20 @@
 						<!-- <lib>oracle.jdbc:ojdbc:${version.oracle.driver}</lib> -->
 					</libs>
 					<systemVariables>
-						<org.tomitribe.sabot.environment>${environment}</org.tomitribe.sabot.environment>
+						<!-- <org.tomitribe.sabot.environment>${environment}</org.tomitribe.sabot.environment> -->
 						<testDataSource>new://Resource?type=javax.sql.DataSource</testDataSource>
 						<!-- <testDataSource.jdbcDriver>org.h2.Driver</testDataSource.jdbcDriver>
 						<testDataSource.jdbcUrl>jdbc:h2:tcp://localhost/~/test1;MODE=Oracle;DB_CLOSE_ON_EXIT=FALSE:AUTO_RECONNECT=TRUE </testDataSource.jdbcUrl>
 						<testDataSource.userName>sa</testDataSource.userName>
 						<testDataSource.password>CVTxCNqevHM=</testDataSource.password>
-						<testDataSource.passwordCipher>Static3DES</testDataSource.passwordCipher> -->
+						<testDataSource.passwordCipher>Static3DES</testDataSource.passwordCipher> 
 						<testDataSource.jdbcDriver>${jdbc.driver}</testDataSource.jdbcDriver>
 						<testDataSource.jdbcUrl>${jdbc.url}</testDataSource.jdbcUrl>
 						<testDataSource.userName>${jdbc.username}</testDataSource.userName>
 						<testDataSource.password>${jdbc.password}</testDataSource.password>
-						<testDataSource.passwordCipher>Static3DES</testDataSource.passwordCipher>
+						<testDataSource.passwordCipher>Static3DES</testDataSource.passwordCipher>-->
 					</systemVariables>
+					<tomeeHttpPort>${http.port}</tomeeHttpPort>
 				</configuration>
 			</plugin>
 		</plugins>

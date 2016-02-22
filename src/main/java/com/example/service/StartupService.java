@@ -24,6 +24,12 @@ public class StartupService {
 		Member m = new Member();
 		m.setName("Ravi");
 		repository.addMember(m);
+		m = new Member();
+		m.setName("Sankar");
+		repository.addMember(m);
+		m = new Member();
+		m.setName("Challa");
+		repository.addMember(m);
 	}
 	
 }

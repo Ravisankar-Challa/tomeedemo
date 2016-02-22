@@ -23,6 +23,10 @@ public class MemberRespository {
 		return m;
 	}
 	
+	public Member findMember(Long id) {
+		return em.find(Member.class, id);
+	}
+	
 	public List<Member> findAll() {
 		return em.createQuery("SELECT m FROM Member m", Member.class).getResultList();
 	}

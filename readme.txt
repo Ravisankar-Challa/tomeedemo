@@ -1,5 +1,5 @@
 This application can be run using following command
-mvn clean package tomee:run -Denvironment=prod -Djdbc.driver=org.h2.Driver -Djdbc.url=jdbc:h2:tcp://localhost/~/test1;DB_CLOSE_ON_EXIT=FALSE; -Djdbc.username=sa -Djdbc.password=CVTxCNqevHM=
+mvn clean package tomee:run -Denvironment=prod -Djdbc.driver=org.h2.Driver -Djdbc.url="jdbc:h2:tcp://localhost/~/test1;DB_CLOSE_ON_EXIT=FALSE;" -Djdbc.username=sa -Djdbc.password=CVTxCNqevHM=
 db password is 'sa'
 To create a database password cipher run /bin/tomee.bat/sh cipher 'password'
 Tomee maven plugin looks for tomee conf folder by default in ${project.basedir}/src/main/tomee/conf
