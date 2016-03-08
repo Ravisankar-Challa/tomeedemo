@@ -8,7 +8,7 @@
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<version.tomee>7.0.0-M1</version.tomee>
+		<version.tomee>7.0.0-M3</version.tomee>
 		<version.javaee>7.0</version.javaee>
 		<version.sabot>0.9</version.sabot>
 		<version.h2>1.4.191</version.h2>
