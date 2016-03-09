@@ -1,0 +1,13 @@
+<!-- <?xml version="1.0"?>
+<scan>
+ <packages>
+  <package>com.example</package>
+  <package>org.tomitribe</package>
+ </packages>
+ <classes>
+  <class>org.bar.Bar1</class>
+  <class>org.anotherbar.Bar2</class>
+ </classes>
+</scan>
+
+ -->

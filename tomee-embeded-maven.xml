@@ -17,11 +17,11 @@
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>${version.javaee}</version>
-			<scope>provided</scope>
-		</dependency>
+	      <groupId>org.apache.tomee</groupId>
+	      <artifactId>javaee-api</artifactId>
+	      <version>${version.javaee}</version>
+	      <scope>provided</scope>
+	    </dependency>
 		<!-- <dependency>
 			<groupId>javax.cache</groupId>
 			<artifactId>cache-api</artifactId>
@@ -42,13 +42,19 @@
 			<artifactId>sabot</artifactId>
 			<version>${version.sabot}</version>
 		</dependency>
+		<dependency>
+	      <groupId>org.apache.tomee</groupId>
+	      <artifactId>openejb-core</artifactId>
+	      <version>${version.tomee}</version>
+	      <scope>test</scope>
+	    </dependency>
 	</dependencies>
 	<build>
 		<finalName>tomeedemo</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.tomee.maven</groupId>
-				<artifactId>tomee-maven-plugin</artifactId>
+				<artifactId>tomee-embedded-maven-plugin</artifactId>
 				<version>${version.tomee}</version>
 				<configuration>
 					<tomeeVersion>${version.tomee}</tomeeVersion>
@@ -72,17 +78,8 @@
 						<testDataSource.userName>${jdbc.username}</testDataSource.userName>
 						<testDataSource.password>${jdbc.password}</testDataSource.password>
 						<testDataSource.passwordCipher>Static3DES</testDataSource.passwordCipher>-->
-						<openejb.system.apps>true</openejb.system.apps>
-						<tomee.serialization.class.blacklist>-</tomee.serialization.class.blacklist>
 					</systemVariables>
-					<deployOpenEjbApplication>true</deployOpenEjbApplication>
-					<synchronization>
-				      <extensions>
-				        <extension>.class</extension>
-				      </extensions>
-				     <updateInterval>2</updateInterval>
-				    </synchronization>
-				    <reloadOnUpdate>true</reloadOnUpdate>
+					<tomeeHttpPort>${http.port}</tomeeHttpPort>
 				</configuration>
 			</plugin>
 		</plugins>
